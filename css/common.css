@@ -1,0 +1,28 @@
+.all {
+    position: relative;
+}
+
+.Nav {
+    width: 1160.58px;
+    height: 40px;
+    top: 47px;
+    border: 1px 0px 0px 0px;
+    position: absolute;
+}
+
+.img_Jadoo {
+    width: 114.91px;
+    height: 33.99px;
+    font-family: sans-serif;
+    position: absolute;
+    z-index: 1;
+}
+
+.img_Rectangle {
+    width: 39px;
+    height: 17.5px;
+    top: 14px;
+    left: 85.08px;
+    position: absolute;
+    z-index: 0;
+}
