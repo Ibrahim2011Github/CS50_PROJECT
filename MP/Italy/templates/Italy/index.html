@@ -1,0 +1,180 @@
+{% extends "Italy/base.html" %}
+{% load static %}
+
+
+{% block content %}
+  <main class="container text-center ">
+    <div class="row align-items-center main">
+      <div class="col-lg-6 col-sm-12 text-start">
+
+        <p class="destinations">BEST DESTINATIONS AROUND THE WORLD</p>
+        <h1 class="display-4 fw-bold dif" style="font-family: Poppins;">Travel, enjoy <br> and live a new <br> and full
+          life</h1>
+        <p class="mt-3 built">Built Wicket longer admire do barton vanity itself do in it. Preferred to sportsmen it
+          engrossed
+          listening. Park gate sell they west hard for the.</p>
+        <div class="mt-4">
+          <button class=" border1 btn">Find out more</button>
+          <button class="btn border2"></button>
+          <img src="{% static 'Italy/' %}img/Polygon 1.png" alt="" class="polygon">
+          <span class="span">Play Demo</span>
+        </div>
+      </div>
+      <div class="col-lg-6 col-sm-12 just_cont">
+        <img src="{% static 'Italy/' %}img/Image.png" alt="Backpacker" class=" float-end img">
+      </div>
+    </div>
+  </main>
+
+
+  <section class="services-section">
+    <div class="container text-center">
+      <p class="category">CATEGORY</p>
+      <h1>We Offer Best Services</h2>
+        <div class="services-grid">
+          <div class="service-card col-sm-12">
+            <img src="{% static 'Italy/' %}img/Group 48.png" alt="Calculated Weather" class=" img1">
+            <p class="p">Calculated Weather</p>
+            <p class="p1">Built Wicket longer admire do barton vanity itself do in it.</p>
+          </div>
+          <div class="service-card col-sm-12">
+            <img src="{% static 'Italy/' %}img/Group 51.png" alt="Calculated Weather" class=" plane">
+            <h6 class="p">Best Flights</h6>
+            <p class="p1">Engrossed listening. Park gate sell they west hard for the.</p>
+          </div>
+          <div class="service-card col-sm-12">
+            <img src="{% static 'Italy/' %}img/Group 50.png" alt="Local Events" class="microphone">
+            <p class="p">Local Events</p>
+            <p class="p1">Barton vanity itself do in it. Prefer to men it engrossed listening.</p>
+          </div>
+          <div class="service-card col-sm-12">
+            <img src="{% static 'Italy/' %}img/Group 49.png" alt="Customization" class="settings">
+            <p class="p">Customization</p>
+            <p class="p1">We deliver outsourced aviation services for military customers.</p>
+          </div>
+        </div>
+    </div>
+  </section>
+
+
+  
+    
+    <section class="destinations-section">
+      <div class="container text-center">
+        <p class="category">Top Selling</p>
+        <h2>Top Destinations</h2>
+        <div class="destinations-grid">
+          {% for p in posts %}
+          <div class="destination-card">
+            <a class="destination-link" href="{{ p.get_absolute_url }}">
+              <img src="{{ p.photo.url }}" alt="{{ p.title }}" class="destination-image">
+            </a>
+            <div class="destination-info">        
+              <div>
+                <h3>{{ p.title }}</h3>
+                <p><img src="{% static 'Italy/' %}img/navigation 1.png" href="{% url 'about' %}" alt="" class="navigation1">10 Days Trip</p>
+              </div>            
+              <span class="price">{{ p.p }}</span>
+            </div>
+          </div>
+          {% endfor %}
+          
+        </div>
+      </div>
+    </section>
+
+
+  <div class="container all">
+
+    <div class="header">
+      <p>Easy and Fast</p>
+      <h1>Book Your Next Trip In 3 Easy Steps</h1>
+    </div>
+    <div class="row">
+      <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+        <div class="steps">
+          <div class="step">
+            <img src="{% static 'Italy/' %}img/Group 7.png" alt="" class="step-icon">
+            <div class="step-content">
+              <h3>Choose Destination</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Urna, tortor tempus.</p>
+            </div>
+          </div>
+          <div class="step">
+            <img src="{% static 'Italy/' %}img/Group 12.png" alt="" class="step-icon">
+            <div class="step-content">
+              <h3>Make Payment</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Urna, tortor tempus.</p>
+            </div>
+          </div>
+          <div class="step">
+            <img src="{% static 'Italy/' %}img/Group 11.png" alt="" class="step-icon">
+            <div class="step-content">
+              <h3>Reach Airport on Selected Date</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Urna, tortor tempus.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+        <div class="trip-card">
+          <div class="shadow"></div>
+          <img class="img_r" src="{% static 'Italy/' %}img/Rectangle 17.jpg" alt="Trip to Greece">
+          <div class="trip-details">
+            <h1>Trip To Greece</h1>
+            <p class="tdp">14-29 June | by Robbin joe</p>
+            <img class="imgtd" src="{% static 'Italy/' %}img/LEAF.png" alt="">
+            <img class="imgtd" src="{% static 'Italy/' %}img/map icon.png" alt="">
+            <img class="imgtd" src="{% static 'Italy/' %}img/send.png" alt="">
+            <p class="tdp1"><img src="{% static 'Italy/' %}img/building 1.png" alt="" class="building">24 people going</p>
+            <div class="trip">
+              <div class="w80">
+                <img src="{% static 'Italy/' %}img/image 32.png" alt="" class="img32">
+              </div>
+              <p>Ongoing</p>
+              <h1>Trip to rome</h1>
+              <img src="{% static 'Italy/' %}img/40% completed.png" alt="">
+              <div class="complete">
+                <div class="com40">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container d_none">
+    <div class="testimonial-container">
+      <p class="Testimonials">Testimonials</p>
+      <h1 class="testimonial-title">What People Say About Us.</h1>
+      <div class="testimonial-nav">
+        <span class="dot active"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+      </div>
+    </div>
+    <div class="testimonial-card">
+      <i class="fa fa-angle-up angle" aria-hidden="true"></i>
+      <i class="fa fa-angle-down angle angle2" aria-hidden="true"></i>
+      <div class="testimonial-card2">
+        <div class="testimonial-content2">
+          <p class="testimonial-author2">Сhris Thomas</p>
+          <p class="testimonial-location2">CEO of Red Button</p>
+        </div>
+      </div>
+      <img src="{% static 'Italy/' %}img/Image1.png" alt="User">
+      <div class="testimonial-content">
+        <p>“On the Windows talking painted pasture yet its express parties use. Sure last upon he same as knew next. Of
+          believed or diverted no.”
+        </p>
+        <p class="testimonial-author">Mike Taylor</p>
+        <p class="testimonial-location">Lahore, Pakistan</p>
+      </div>
+    </div>
+  </div>
+  {% endblock %}
+
+<html>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>

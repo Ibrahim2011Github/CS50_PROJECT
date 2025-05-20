@@ -1,0 +1,19 @@
+{% extends "Italy/base.html" %}
+{% load static %}
+
+{% block content %}
+    {% for p in posts %}
+        {% if p.pk == post_id  %}
+            <div class="destination-info d-in"> 
+                <img src="{{ p.photo.url }}" alt="{{ p.title }}" class="destination-image d-i">
+                <div class="d-inf">
+                    <h3>{{ p.title }}</h3>
+                    <p><img src="{% static 'Italy/' %}img/navigation 1.png" href="{% url 'about' %}" alt="" class="navigation1">{{ p.content }}</p>
+                    <span class="price p">{{ p.p }}</span>
+                    <span class="price p">{{ p.content2 }}</span>  
+                </div>
+            </div>
+        {% endif %}  
+    {% endfor %}
+{% endblock %}
+
