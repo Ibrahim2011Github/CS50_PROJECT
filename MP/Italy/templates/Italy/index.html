@@ -72,7 +72,7 @@
             <div class="destination-info">        
               <div>
                 <h3>{{ p.title }}</h3>
-                <p><img src="{% static 'Italy/' %}img/navigation 1.png" href="{% url 'about' %}" alt="" class="navigation1">10 Days Trip</p>
+                <p><img src="{% static 'Italy/' %}img/navigation 1.png" href="{% url 'about' %}" alt="" class="navigation1">{{p.content}}</p>
               </div>            
               <span class="price">{{ p.p }}</span>
             </div>
